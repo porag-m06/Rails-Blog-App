@@ -1,0 +1,9 @@
+<%= link_to user_url(user.id) do %>
+  <article class="profile">
+    <div class="photo"><img src="<%= user.photo %>" alt="User photo"></div>
+    <div class="detail">
+      <h2><%= user.name %></h2>
+      <p>Number of posts: <%= user.posts_counter %></p>
+    </div>
+  </article>
+<% end %>
