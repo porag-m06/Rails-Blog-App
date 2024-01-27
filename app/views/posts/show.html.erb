@@ -1,1 +1,12 @@
-<h1>Show details of the selected post.</h1>
+<div class="detail full-width">
+    <div class="post-head">
+      <h3>Post  #<%= @post.id %> by <%= @user.name %></h3>
+      <span>Comments: <%= @post.comments_counter || 0 %> Likes:<%= @post.likes_counter || 0 %></span>
+    </div>
+    <p class="comments"><%= @post.text%></p>
+</div>
+<div class="detail full-width d-margin">
+      <% @post.comments.each do |comment| %>
+      <p class="comments"><b><%= @user.name %>:</b> <%= comment.text %></p>
+      <% end %>
+    </div>

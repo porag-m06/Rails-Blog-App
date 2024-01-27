@@ -1,1 +1,9 @@
-<h1>Showing all posts of the selected user.</h1>
+<div>
+  <%= render partial: 'users/user_profile', locals: {user: @user}%>
+</div>
+<div class="posts">
+ <%= render partial: 'user_posts_all', locals: {posts: @posts}%>
+</div>
+<div class="posts-details">
+    <button type="button" >pagination</button>
+</div>
