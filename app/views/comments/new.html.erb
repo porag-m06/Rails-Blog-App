@@ -1,0 +1,14 @@
+<h1>Add New Comment:</h1>
+<%= form_with(model: @new_comment_model, url: create_comments_path) do |form| %>
+  <div class="fpost">
+
+    <div class="ftext">
+      <%= form.label :text %> 
+      <%= form.text_area :text %>
+    </div>
+
+    <div>
+      <%= form.submit%>
+    </div>
+  </div>
+<% end %>
