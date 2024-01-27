@@ -52,6 +52,7 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 # RSpec for unite tests
+gem 'rails-controller-testing'
 gem 'rspec-rails'
 
 group :development, :test do
