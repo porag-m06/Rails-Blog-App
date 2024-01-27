@@ -1,6 +1,9 @@
 <div>
   <%= render partial: 'users/user_profile', locals: {user: @user}%>
 </div>
+<%= link_to new_post_url() do %>
+  <button class="np-btn">Add A New Post</button>
+<% end %>
 <div class="posts">
  <%= render partial: 'user_posts_all', locals: {posts: @posts}%>
 </div>
