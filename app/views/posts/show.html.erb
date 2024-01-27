@@ -1,1 +1,23 @@
-<h1>Show details of the selected post.</h1>
+<div class="detail full-width d-margin">
+    <div class="post-head">
+      <h3>Post  #<%= @post.id %> by <%= @user.name %></h3>
+      <span>Comments: <%= @post.comments_counter || 0 %> Likes:<%= @post.likes_counter || 0 %></span>
+    </div>
+    <p class="comments"><%= @post.text%></p>
+</div>
+
+<div class="detail full-width like-comment">
+  <%= link_to new_comment_path(@post.id) do %>
+    <button>Add New Comment</button>
+  <% end %>
+
+  <%= link_to new_like_path() do %>
+    <button>Like</button>
+  <% end %>
+</div>
+
+<div class="detail full-width">
+      <% @post.comments.each do |comment| %>
+      <p class="comments"><b><%= @user.name %>:</b> <%= comment.text %></p>
+      <% end %>
+</div>

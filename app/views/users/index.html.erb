@@ -1,1 +1,5 @@
-<h1> Showing all users in: users#index ( will be the root actually)</h1>
+<section>
+ <% @users.each do |u| %>
+  <%= render partial: 'user_profile', locals: {user: u}%>
+ <% end %>
+</section>

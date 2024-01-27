@@ -1,0 +1,9 @@
+  <article class="uposts">
+   <% user.three_recent_posts.each do |post|%>
+     <div class="detail full-width">
+      <h3>Post # <%= post.id %></h3>
+      <h3><%= post.text %></h3>
+      <p>Comments: <%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0 %>
+    </div>
+   <% end %>
+  </article>

@@ -1,0 +1,14 @@
+  <article class="uposts">
+   <% posts.each do |post|%>
+     <div class="detail full-width">
+      <h3><%= link_to "Post ", user_post_url(@user.id, post.id) %> # <%= post.id %></h3>
+      <h3><%= post.text %></h3>
+      <p>Comments: <%= post.comments_counter || 0 %>, Likes: <%= post.likes_counter || 0 %>
+     </div>
+     <div class="detail full-width d-margin">
+      <% post.five_recent_comments.each do |comment| %>
+      <p class="comments"><b><%= @user.name %>:</b> <%= comment.text %></p>
+      <% end %>
+     </div>
+   <% end %>
+  </article>
