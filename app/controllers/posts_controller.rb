@@ -10,5 +10,6 @@ class PostsController < ApplicationController
   # Fetching the details post with post id = :id
   def show
     @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 end
