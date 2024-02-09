@@ -19,13 +19,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    @new_post_model = Post.new(allowed_post_params)
-    @new_post_model.author_id = current_user.id
+    @user = User.find(params[:user_id])
+    @new_post_model = @user.posts.new(allowed_post_params)
     @new_post_model.comments_counter = 0
     @new_post_model.likes_counter = 0
-
     if @new_post_model.save
-      redirect_to user_post_url(current_user, @new_post_model)
+      redirect_to user_post_url(@user, @new_post_model)
     else
       render :new
     end
