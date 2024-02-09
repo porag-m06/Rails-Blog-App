@@ -144,6 +144,12 @@ To run tests, run the following command:
 - Twitter: [@twitterhandle](https://twitter.com/rarebird06)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/muhammad-porag-nsu-cse/)
 
+👤 **Supreeti**
+
+- GitHub: [@supreeti](https://github.com/supreeti)
+- Twitter: [@Ksupreeti](https://twitter.com/Ksupreeti)
+- LinkedIn: [Supreeti](https://www.linkedin.com/in/supreeti-kushwaha-23336232/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
