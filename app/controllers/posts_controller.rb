@@ -14,7 +14,8 @@ class PostsController < ApplicationController
   end
 
   def new
-    @new_post_model = Post.new
+    @user = User.find(params[:user_id])
+    @new_post_model = @user.posts.new
   end
 
   def create
